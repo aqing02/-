@@ -1,0 +1,11 @@
+<!--pages/classic/index.wxml-->
+<view class="container">
+    <view class="header">
+        <cmp-ebsoide index="{{classicData.index}}" />
+        <cmp-like count="{{classicData.fav_nums}}" like="{{classicData.like_status === 1}}" bind:mylike="onMyLike" />
+    </view>
+    <cmp-fm wx:if="{{classicData.type === 100}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+    <cmp-essay wx:if="{{classicData.type === 300}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+    <cmp-music wx:if="{{classicData.type === 200}}" img="{{classicData.image}}" content="{{classicData.content}}" title="{{classicData.title}}" music="{{classicData.url}}" />
+    <cmp-navi class="navi" title="{{classicData.title}}" isFirst="{{isFirst}}" bind:myLeft="onNext" bind:myRight="onPrev" isLast="{{isLast}}" />
+</view>

@@ -1,0 +1,6 @@
+<!--components/classic/essay/index.wxml-->
+<view class="container">
+    <image class="img" src="{{src}}" binderror="deal" ></image>
+    <image class="tag" src="./images/essay@tag.png" style="width: 80rpx;height: 140rpx;"></image>
+    <text class="content">{{content}}</text>
+</view>

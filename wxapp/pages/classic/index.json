@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "cmp-like":"/components/like/index",
+        "cmp-ebsoide":"/components/ebsoide/index",
+        "cmp-fm":"/components/classic/movie/index",
+        "cmp-essay":"/components/classic/essay/index",
+        "cmp-music":"/components/classic/music/index",
+        "cmp-navi":"/components/navi/index"
+    }
+}

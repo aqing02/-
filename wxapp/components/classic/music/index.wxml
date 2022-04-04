@@ -1,0 +1,10 @@
+<!--components/classic/music/index.wxml-->
+
+<view class="container">
+<image src="{{src}}" class='{{ty?"classic-img":"classic-img rt"}}' animation="{{animation}}" binderror="deal" animation="" />
+<image src="{{ty?play:pause}}" alt="" class="play-img" bindtap="play"/>
+<image class="tag" src="./images/music@tag.png"></image>
+<text class="content">{{content}}</text>
+
+<!-- classic-img rt -->
+</view>
