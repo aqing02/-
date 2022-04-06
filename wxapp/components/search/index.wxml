@@ -1,0 +1,41 @@
+<!--components/search/index.wxml-->
+<view class="container">
+    <view class="header">
+        <view class="search-container">
+            <image class="icon" src="/images/icon/search.png" />
+            <input placeholder-class='in-bar' placeholder='书籍名' class='bar' bind:confirm="onSearch" auto-focus="true" value="{{q}}" />
+            <image class="cancel-img" src="/images/icon/cancel.png" bindtap="onClear" />
+        </view>
+        <view class='cancel' bindtap="back">取消</view>
+    </view>
+    <view wx:if="{{isSearch}}">
+        <view class="history">
+            <view class="title">
+                <view class="chunk"></view>
+                <text>历史搜索</text>
+            </view>
+            <view class="tags">
+                <block wx:for="{{booksearch}}" wx:key="index" >
+                <cmp-tag  content="{{item}}" bindtap="onSearch" data-val="{{item}}"  />
+            </block>
+            </view>
+        </view>
+        <view class="history hot-search">
+            <view class="title">
+                <view class="chunk"></view>
+                <text>热门搜索</text>
+            </view>
+            <view class="tags">
+            <block wx:for="{{hot}}" wx:key="index" >
+                <cmp-tag  content="{{item}}" bindtap="onSearch" data-val="{{item}}"  />
+            </block>
+            </view>
+        </view>
+    </view>
+    <view class="books-container" wx:else>
+        <block wx:for="{{booklist}}" wx:key="id">
+            <cmp-book bookmsg="{{item}}" class="book" />
+        </block>
+    </view>
+    <text wx:if="{{noneResult}}" class="emty-tip">没有搜索到书籍</text>
+</view>

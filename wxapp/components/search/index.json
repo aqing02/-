@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "cmp-tag":"/components/tag/index",
+        "cmp-book":"/components/booksearch/index"
+    }
+    
+    
+}

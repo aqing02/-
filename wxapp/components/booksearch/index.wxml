@@ -1,0 +1,11 @@
+<!--components/booksearch/index.wxml-->
+<view class="container">
+    <image class="container-image" src="{{bookmsg.image}}"></image>
+    <view style="background-color: white;" class="description">
+        <view class="title" wx:if="book.title">{{bookmsg.title}}</view>
+        <view class="author">{{bookmsg.author}}</view>
+        <view class="foot">
+        <text class="footer">{{bookmsg.fav_nums}}喜欢</text>
+        </view>
+    </view>
+</view>

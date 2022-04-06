@@ -1,0 +1,110 @@
+/* pages/book-detail/index.wxss */
+.container {
+  background-color: #f5f5f5;
+  width: 100%;
+}
+.header {
+  background-color: #fff;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header image {
+  width: 200rpx;
+  height: 300rpx;
+  box-shadow: 20px 2px 3px #e3e3e3;
+}
+.title {
+  color: #2f2f2f;
+  margin-top: 20rpx;
+  font-size: 38rpx;
+  font-weight: 600;
+}
+.author {
+  font-size: 28rpx;
+  color: #999;
+}
+.sub-container {
+  width: 690rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 30rpx;
+}
+.headerLine {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 20rpx;
+}
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.comment-container cmp-tag{
+    margin-left: 30rpx;
+}
+.comment-container cmp-tag:nth-child(1)>view {
+  background-color: #fffdbb;
+}
+.comment-container cmp-tag:nth-child(2)>view {
+  background-color: #eefbff;
+}
+.content {
+    font-weight: 500;
+}
+.detail-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 100rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  color: #999;
+  margin-right: 30rpx;
+}
+.search{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+}
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    margin-left: 20rpx;
+    
+}
+
+.in-bar {
+    color: #999;
+}
+
+.bar {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: inline-block;
+    height: 68rpx;
+    width: 500rpx;
+    font-size: 28rpx;
+}

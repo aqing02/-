@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cmp-tag":"/components/tag",
+    "cmp-search":"/components/search",
+    "cmp-like":"/components/like"
+  }
+}

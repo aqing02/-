@@ -1,0 +1,14 @@
+//utils/tool.wxs
+//注意：wxs中只能使用ES5语法，不能使用ES6以上的语法
+// 将text字符串中的\\n替换成\n
+var format = function(text){
+    if(!text){//如果字符串为空，就不做任何处理
+        return
+    }
+    // g表示替换text字符串中所以的\n
+    var reg = getRegExp('\\\\n','g')
+    return text.replace(reg,'\n&nbsp;&nbsp;&nbsp;')
+}
+module.exports ={
+    format:format
+}

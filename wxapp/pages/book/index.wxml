@@ -1,2 +1,22 @@
 <!--pages/book/index.wxml-->
-<text>书籍</text>
+<view class="container" wx:if="{{show}}">
+<!-- 搜索框 -->
+<view class="header" bindtap="search">
+   <view class="box">
+   <image src="/images/icon/search.png"></image>
+   <text>搜索书籍</text>
+   </view>
+</view>
+<!-- 书籍内容 -->
+<view class="sub-container">
+    <image class="img" src="/images/book/quality.png"></image>
+    <view class="books-container">
+    <view class="bookmsg" wx:for="{{bookdata}}"  wx:for-item="book" wx:key="id" bindtap="todetail">
+        <cmp-book book="{{book}}" />
+    </view>
+    </view>
+</view>
+</view>
+<view wx:else>
+    <cmp-search bind:back="search" more="{{more}}"  />
+</view>

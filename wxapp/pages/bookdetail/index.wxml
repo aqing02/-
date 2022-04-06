@@ -1,0 +1,49 @@
+<!--pages/book-detail/index.wxml-->
+<wxs src="../../utils/tool.wxs" module="t"/>
+<view class="container">
+  <view class="header">
+    <image src="{{book.image}}"/>
+    <text class="title">{{book.title}}</text>
+    <text class="author">{{book.author}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headerLine">短评</text>
+    <view class="comment-container">
+      <cmp-tag content="{{item.content}}+{{item.nums}}"  wx:for="{{comment}}" wx:key="id" data-val="{{item.content}}"  bindtap="onComment" />
+    </view>
+  </view>
+  <view class="sub-container">
+    <text class="headline">内容简介</text>
+    <text decode="{{true}}">
+        {{t.format(book.summary)}}
+    </text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">书本信息</text>
+    <view class="detail-container">
+      <view class="vertical description">
+        <text>出版社</text>
+        <text>出版年</text>
+        <text>页数</text>
+        <text>定价</text>
+        <text>装帧</text>
+      </view>
+      <view class="vertical">
+        <text>{{book.publisher}}</text>
+        <text>{{book.pubdate}}</text>
+        <text>{{book.pages}}</text>
+        <text>{{book.price}}</text>
+        <text>{{book.binding}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="search">
+    <view class="search-container">
+        <input placeholder-class='in-bar' placeholder='请输入评论' bind:confirm="onComment"  class='bar'  auto-focus="true"  />
+    </view>
+    <view>
+        <cmp-like  count="{{like.fav_nums}}" like="{{like.like_status === 1}}" />
+    </view>
+  </view>
+    
+</view>
